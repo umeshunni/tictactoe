@@ -31,6 +31,146 @@ h1 {
     font-weight: bold;
 }
 
+/* Game Mode Selector */
+.game-mode-selector {
+    display: flex;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f7fafc;
+    border: 2px solid #e2e8f0;
+}
+
+.mode-btn {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    background: transparent;
+    color: #718096;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mode-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.mode-btn:hover:not(.active) {
+    background: #edf2f7;
+}
+
+/* Online Controls */
+.online-controls {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #f7fafc;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+}
+
+.game-code-section {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.game-code-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.game-code-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.join-btn, .create-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.join-btn {
+    background: #48bb78;
+    color: white;
+}
+
+.join-btn:hover {
+    background: #38a169;
+    transform: translateY(-1px);
+}
+
+.create-btn {
+    background: #4299e1;
+    color: white;
+    width: 100%;
+}
+
+.create-btn:hover {
+    background: #3182ce;
+    transform: translateY(-1px);
+}
+
+.room-code {
+    margin-top: 1rem;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    border: 2px solid #e2e8f0;
+}
+
+.code-display {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #667eea;
+    letter-spacing: 3px;
+}
+
+/* Connection Status */
+.connection-status {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #e53e3e;
+}
+
+.status-indicator.connected {
+    background: #48bb78;
+}
+
+.status-indicator.connecting {
+    background: #ed8936;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
 .game-info {
     margin-bottom: 2rem;
 }
